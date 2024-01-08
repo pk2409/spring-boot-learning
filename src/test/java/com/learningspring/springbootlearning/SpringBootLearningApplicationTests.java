@@ -1,2 +1,12 @@
-package com.learningspring.springbootlearning;public class SpringBootLearningApplicationTests {
+package com.learningspring.springbootlearning;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringBootLearningApplicationTests {
+
+
+
+
 }

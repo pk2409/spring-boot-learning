@@ -1,2 +1,13 @@
-package com.learningspring.springbootlearning.service;public class SpringBootLearningApplication {
+package com.learningspring.springbootlearning;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootLearningApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootLearningApplication.class, args);
+    }
+
 }

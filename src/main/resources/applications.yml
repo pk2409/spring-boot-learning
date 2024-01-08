@@ -1,0 +1,62 @@
+spring:
+
+  profiles:
+    active:
+      prod
+
+server:
+  port: 8082
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dcbapp-dev
+    password: jiffygelpen
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dcbapp-qa
+    password: jiffygelpen
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dcbapp-prod
+    password: jiffygelpen
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+  management:
+    endpoints:
+
+      jmx:
+
+        exposure:
+
+          include: "*"
+#          includes all the endpoints
+---
